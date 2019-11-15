@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}
+    <title>Add new user story</title>
+{% endblock title %}
+
+{% block content%}
+    <!--<h1> Add User Story</h1>-->
+    <form action="{{ url_for('index') }}" method="POST">
+        <label for="title" ><strong>Story Title:</strong></label> <br>
+        <input name="Story Title" type="text" minlength="5" required><br>
+        <br>
+        <label for="story"> <strong>User Story:</strong></label><br>
+        <textarea name="User Story" cols="20" rows="12" required></textarea><br>
+        <br>
+        <label for="acceptance"> <strong>Acceptance Criteria:</strong></label><br>
+        <textarea name="Acceptance Criteria" cols="20" rows="15" required></textarea><br>
+        <br>
+        <label for="business"> Business Value:</label><br>
+        <input name="Business Value" type="number" max="1500" min="100" step="100"><br>
+        <br>
+        <label for="estimation">Estimation:</label><br>
+        <input name="Estimation" type="number" max="40" min="0.5" step="0.5"><br>
+        <br>
+        <br>
+        <input type="submit" value="Add new User Story">
+    </form>
+
+{% endblock content%}

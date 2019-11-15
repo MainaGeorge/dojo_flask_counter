@@ -1,0 +1,38 @@
+{% extends "base.html"  %}
+
+{% block title %}
+    <title>Welcome! Super Sprinter 3000</title>
+{% endblock title %}
+
+{% block content %}
+    <h1>Super Sprinter 3000</h1>
+
+    <a href=" {{ url_for('add_new_story') }}"> Add new User Story</a>
+    <table cellspacing="20" width="1200" > 
+        <thead>
+        <tr>
+            <!--create the headers using the dictionary keys-->
+            {% for header_title in database[0] %}
+            <th>{{ header_title }}</th>
+            {% endfor %}
+        </tr>
+            
+        </thead>
+        <tbody>
+        {% for each_dict in database %}
+        <!--each dictionary is a row on the table-->
+        <tr>
+            {% for key in each_dict %}
+            {% if key == 'Story Title' %}
+            <!--if the title is Story Title make it a link-->
+            <td> <a href=" {{ url_for('update_user_story', user_number=each_dict['Id']) }} ">{{ each_dict[key] }}</a></td>
+            {% else %}
+            <td>{{ each_dict[key] }}</td>
+            {% endif %}
+            {% endfor %}
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock content %}

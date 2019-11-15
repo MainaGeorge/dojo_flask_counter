@@ -1,0 +1,24 @@
+Id,Story Title,User Story,Acceptance Criteria,Business Value,Estimation,Status
+1,List all User Stories,"As a User,
+I want to see all the previously saved User Stories,
+So that I get an overview of all requirements","Given that there are any number ({0..n}) of saved User Stories,
+When I open the website (/),
+Then ensure I see a table with all the stored data",500,0.5,In Progress
+2,Add new User Stories,"As a User,
+I want to be able to add a new User Stories,
+So that I can extend the list of requirements","When I open the website (/),
+And I click the ""Add User Story"" link
+Then ensure I see a form where I can add details of the new User Story,
+And if I submit the form, this User Story gets saved.",400,9.5,Review
+3,Edit a user story here,"As a User,
+I want to be able to change details of an existing User Story,
+So that I can keep them up-to-date with the current info.","When I open the website (/),
+And I click the title of a User Story,
+Then ensure I see a form prefilled with the details of the User Story,
+And when I submit the changed data, ensure it gets save,
+And ensure it overwrites the previous details, not creating a new User Story.",450,0.5,Todo
+4,bite me off,this is some thing,accept criteria here,100,4.5,
+5,bite me off,this is some thing,accept criteria here,100,4.5,
+6,bite me off,this is some thing,accept criteria here,100,4.5,
+7,bite me off,this is some thing,accept criteria here,100,4.5,
+8,bite me off,this is some thing,accept criteria here,100,4.5,
